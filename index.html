@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProyectoFinal - Gestión y Simulador de Nómina</title>
+
+  <!-- SweetAlert2 (reemplaza alert/prompt/confirm) -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+  <!-- Iconos (opcional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <script src="scrip.js"></script>
+  <header>
+    <h1>Simulador Interactivo: Gestión de Empleados & Nómina</h1>
+    <p class="subtitle">Proyecto Final - Diplomatura Web Developer Fullstack (Coderhouse)</p>
+  </header>
 
+  <main>
+    <section class="panel">
+      <h2>Agregar / Editar Empleado</h2>
+      <form id="form-empleado">
+        <div class="fila">
+          <input id="nombre" name="nombre" placeholder="Nombre" required>
+          <input id="apellido" name="apellido" placeholder="Apellido" required>
+        </div>
+        <div class="fila">
+          <input id="direccion" name="direccion" placeholder="Dirección" required>
+          <select id="puesto" name="puesto" required>
+            <option value="">Cargando puestos...</option>
+          </select>
+        </div>
+        <div class="fila">
+          <input id="horas" name="horas" placeholder="Horas trabajadas (ej. 40)" type="number" min="0" value="40" required>
+          <input id="sueldoExtra" name="sueldoExtra" placeholder="Bonos / Extras (opcional)" type="number" min="0" value="0">
+        </div>
+        <div class="acciones">
+          <button type="submit" id="btn-guardar"><i class="fas fa-plus"></i> Guardar</button>
+          <button type="button" id="btn-limpiar"><i class="fas fa-broom"></i> Limpiar</button>
+          <button type="button" id="btn-cargar-ejemplo"><i class="fas fa-download"></i> Cargar ejemplo</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Lista de Empleados</h2>
+      <div class="acciones-filtro">
+        <input id="buscar" placeholder="Buscar por nombre, apellido o puesto">
+        <select id="filtroPuesto"><option value="">Filtrar por puesto</option></select>
+        <button id="btn-reset"><i class="fas fa-eraser"></i> Reset</button>
+      </div>
+      <ul id="lista-empleados" class="lista"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Simulador de Nómina (por empleado)</h2>
+      <p>Seleccioná un empleado en la lista y hacé click en <strong>Calcular Nómina</strong>.</p>
+      <div id="resultado-nomina" class="resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ProyectoFinal-Sena - Entrega final | Diplomatura Coderhouse</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
 </body>
 </html>

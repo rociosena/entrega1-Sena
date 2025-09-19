@@ -1,0 +1,13 @@
+{
+  "puestos": [
+    { "id": "dev_jr", "nombre": "Desarrollador Jr", "sueldoHora": 800 },
+    { "id": "dev_sr", "nombre": "Desarrollador Sr", "sueldoHora": 1600 },
+    { "id": "analista", "nombre": "Analista", "sueldoHora": 1000 },
+    { "id": "administracion", "nombre": "Administración", "sueldoHora": 700 },
+    { "id": "gerente", "nombre": "Gerente", "sueldoHora": 2500 }
+  ],
+  "empleadosEjemplo": [
+    { "nombre":"María","apellido":"Gómez","direccion":"Sarmiento 123","puesto":"desarrollador jr","horas":40,"sueldoExtra":0 },
+    { "nombre":"Juan","apellido":"Pérez","direccion":"Mitre 456","puesto":"administración","horas":38,"sueldoExtra":200 }
+  ]
+}
